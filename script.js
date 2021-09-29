@@ -13,32 +13,32 @@ function computerPlay() {
   }
 }
 
-function playRound(playerSelection, computerSelection) {   
+function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
       alert('It\'s a TIE!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);
     } else if (playerSelection === 'rock') {
     if (computerSelection === 'paper') {
       scoreComputer = scoreComputer + 1;
-      alert('Paper beats rock, YOU LOSE!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);      
+      alert('Paper beats rock, YOU LOSE!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);
     } else if (computerSelection === 'scissors') {
       scorePlayer = scorePlayer + 1;
-      alert('Rock beats scissors, YOU WIN!!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);      
+      alert('Rock beats scissors, YOU WIN!!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);
     }
   } else if (playerSelection === 'scissors') {
     if (computerSelection === 'rock') {
       scoreComputer = scoreComputer + 1;
-      alert('Rock beats scissors, YOU LOSE!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);      
+      alert('Rock beats scissors, YOU LOSE!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);
     } else if (computerSelection === 'paper') {
       scorePlayer = scorePlayer + 1;
-      alert('Scissors beats paper, YOU WIN!!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);      
+      alert('Scissors beats paper, YOU WIN!!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);
     }
   } else if (playerSelection === 'paper') {
     if (computerSelection === 'scissors') {
       scoreComputer = scoreComputer + 1;
-      alert('Scissors beats paper, YOU LOSE!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);      
+      alert('Scissors beats paper, YOU LOSE!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);
     } else if (computerSelection === 'rock') {
       scorePlayer = scorePlayer + 1
-      alert('Paper beats rock, YOU WIN!!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);      
+      alert('Paper beats rock, YOU WIN!!' + ' the score is ' + scorePlayer + ' to ' + scoreComputer);
       ;
     }
   }
@@ -53,7 +53,7 @@ buttons.forEach((button) => {
       scoreComputer = 0;
       alert('The scores have been reset.')
     } else {
-    alert(playRound(button.id, computerPlay()));
+      playRound(button.id, computerPlay());
     }
 })})
 
